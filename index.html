@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet"> 
+   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css " rel="stylesheet"> 
+
+
+     <link rel="stylesheet" href="assets/tether/tether.min.css">
+       <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="slick.css"/>
+ <!--  font-family: 'Roboto', sans-serif; -->
+ <style>
+ body{
+  font-family: 'Karla', sans-serif;
+ }
+ .beauty_second_section{
+      padding-top: 70px;
+    padding-bottom: 70px;
+ }
+ .pricing_section{
+      padding-top: 70px;
+    padding-bottom: 70px;
+ }
+ .b_s_image img{
+  width:100%;
+ }
+ .section_header{
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: -1px;
+        font-size: 44px;
+ }
+ .beauty_second_section h3{
+      font-size: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+ }
+ .beauty_second_section p{
+  font-size: 18px;
+    color: #777373;
+ }
+.l_more_btn {
+      padding: 8px 20px;
+    background: transparent;
+    border: 1px solid #000;
+    color: #000;
+    font-size: 19px;
+    margin-top: 20px;
+ }
+.content_b_s {
+    margin-top: 75px;
+}
+/*LIGHT BOX GALLERY*/
+#gallery {
+  padding-top: 40px;
+}
+
+.gray_pattern{
+      background-image: url(images/gray_pattern.png);
+}
+.pricing_section{
+   background-image: url(images/pink_bg.png);
+}
+.section_subheader {
+    text-align: center;
+    font-size: 20px;
+    color: #a5a2a2;
+        margin-bottom: 50px;
+}
+
+.price_container h4{
+
+    padding: 10px 30px;
+    margin-bottom: 0;
+    border-top: 1px solid #b9b8b8;
+    border-right: 1px solid #b9b8b8;
+    border-left: 1px solid #b9b8b8;
+}
+.price_container{
+  margin-bottom: 30px;
+      background: #fff;
+}
+.price_container table 
+{
+  width: 100%;
+      border-collapse: collapse;
+}
+.price_container table tbody tr td {
+    font-size: 16px;
+    padding: 8px 30px;
+    border: 1px solid #b9b8b8;
+    color: #949494;
+}
+
+
+
+    .slick-slide {
+      margin: 0px 20px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: black;
+    }
+
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+    }
+    
+    .slick-active {
+      opacity: .5;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }
+body .gallery_section{
+  padding-top:50px;
+  padding-bottom:70px;
+      background: #fff;
+}
+.price_container table tbody tr td:first-child {
+  width:80%;
+
+  }
+  .price_container table tbody tr td:nth-child(2) {
+  width:20%;
+  color:#000;
+
+  }
+
+
+.img-wrapper {
+  position: relative;
+  margin-top: 15px;
+}
+.img-wrapper img {
+  width: 100%;
+}
+
+.img-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+.img-overlay i {
+  color: #fff;
+  font-size: 3em;
+}
+
+#overlay {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#overlay img {
+  margin: 0;
+  width: 80%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 5%;
+}
+
+@media screen and (min-width: 768px) {
+  #overlay img {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #overlay img {
+    width: 50%;
+  }
+}
+
+#nextButton {
+  color: #fff;
+  font-size: 2em;
+  transition: opacity 0.8s;
+}
+#nextButton:hover {
+  opacity: 0.7;
+}
+@media screen and (min-width: 768px) {
+  #nextButton {
+    font-size: 3em;
+  }
+}
+
+#prevButton {
+  color: #fff;
+  font-size: 2em;
+  transition: opacity 0.8s;
+}
+#prevButton:hover {
+  opacity: 0.7;
+}
+@media screen and (min-width: 768px) {
+  #prevButton {
+    font-size: 3em;
+  }
+}
+
+#exitButton {
+  color: #fff;
+  font-size: 2em;
+  transition: opacity 0.8s;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+#exitButton:hover {
+  opacity: 0.7;
+}
+@media screen and (min-width: 768px) {
+  #exitButton {
+    font-size: 3em;
+  }
+}
+
+</style>
+
+</head>
+<body>
+
+  <div class="gray_pattern">
+
+<div class="container beauty_second_section" style="display:none;">
+
+  <div class="row">
+    <div class="offset-sm-1 col-sm-5">
+      <div class="content_b_s">
+      <h3>Column 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elitUt enim ad minim veniam, quis nostrud exercitation ullamco laboris. quis nostrud exercitation ullamco laboris.. .</p>
+    <button class="l_more_btn">Learn More</button>
+  </div>
+    </div>
+    <div class="col-sm-5">
+      <div class="b_s_image">
+        <img src="images/img2.png"/>
+      </div>
+    </div>
+   
+  </div>
+</div>
+</div>
+
+<!-- LIGHTBOX GALLERY -->
+<section id="gallery" class="gallery_section" style="display:none;">
+  <div class="container">
+    <div id="image-gallery">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 image">
+          <div class="img-wrapper">
+            <a href="images/gallery1.jpg"><img src="images/gallery1.jpg" class="img-responsive"></a>
+            <div class="img-overlay">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 image">
+          <div class="img-wrapper">
+                 <a href="images/gallery2.jpg"><img src="images/gallery2.jpg" class="img-responsive"></a>
+            <div class="img-overlay">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 image">
+          <div class="img-wrapper">
+           <a href="images/gallery3.jpg"><img src="images/gallery3.jpg" class="img-responsive"></a>
+            <div class="img-overlay">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 image">
+          <div class="img-wrapper">
+           <a href="images/gallery4.jpg"><img src="images/gallery4.jpg" class="img-responsive"></a>
+            <div class="img-overlay">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 image">
+          <div class="img-wrapper">
+             <a href="images/gallery5.jpg"><img src="images/gallery5.jpg" class="img-responsive"></a>
+            <div class="img-overlay">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 image">
+          <div class="img-wrapper">
+                <a href="images/gallery6.jpg"><img src="images/gallery6.jpg" class="img-responsive"></a>
+            <div class="img-overlay">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+     
+      </div><!-- End row -->
+    </div><!-- End image gallery -->
+  </div><!-- End container --> 
+</section>
+
+<!-- pricing section  -->
+<section class="pricing_section cid-r9yv8SBclH mbr-parallax-background" style="display:none;">
+  <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+                  <div>
+          <h2 class="section_header">
+          Pricing Detail
+          </h2>
+          <P class="section_subheader">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+          </P>
+          </div>
+        </div>
+        <div class="col-sm-4">
+  
+          <div class="price_container">
+            <h4 class="">Skin</h4>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Relaxation Mask</td>
+                  <td>$14</td>
+                </tr>
+                  <tr>
+                  <td>Relaxation Mask</td>
+                  <td>$14</td>
+                </tr>
+                  <tr>
+                  <td>Relaxation Mask</td>
+                  <td>$14</td>
+                </tr>
+                  <tr>
+                  <td>Relaxation Mask</td>
+                  <td>$14</td>
+                </tr>
+
+            </table>
+          </div>
+        </div>
+           <div class="col-sm-4">
+  
+          <div class="price_container">
+            <h4 class="">Skin</h4>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Relaxation Mask</td>
+                  <td>$14</td>
+                </tr>
+                  <tr>
+                  <td>Relaxation Mask</td>
+                  <td>$14</td>
+                </tr>
+                  <tr>
+                  <td>Relaxation Mask</td>
+                  <td>$14</td>
+                </tr>
+                  <tr>
+                  <td>Relaxation Mask</td>
+                  <td>$14</td>
+                </tr>
+
+            </table>
+          </div>
+        </div>
+           <div class="col-sm-4">
+  
+          <div class="price_container">
+            <h4 class="">Skin</h4>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Relaxation Mask</td>
+                  <td>$14</td>
+                </tr>
+                  <tr>
+                  <td>Relaxation Mask</td>
+                  <td>$14</td>
+                </tr>
+                  <tr>
+                  <td>Relaxation Mask</td>
+                  <td>$14</td>
+                </tr>
+                  <tr>
+                  <td>Relaxation Mask</td>
+                  <td>$14</td>
+                </tr>
+
+            </table>
+          </div>
+        </div>
+           <div class="col-sm-4">
+  
+          <div class="price_container">
+            <h4 class="">Skin</h4>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Relaxation Mask</td>
+                  <td>$14</td>
+                </tr>
+                  <tr>
+                  <td>Relaxation Mask</td>
+                  <td>$14</td>
+                </tr>
+                  <tr>
+                  <td>Relaxation Mask</td>
+                  <td>$14</td>
+                </tr>
+                  <tr>
+                  <td>Relaxation Mask</td>
+                  <td>$14</td>
+                </tr>
+
+            </table>
+          </div>
+        </div>
+           <div class="col-sm-4">
+  
+          <div class="price_container">
+            <h4 class="">Skin</h4>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Relaxation Mask</td>
+                  <td>$14</td>
+                </tr>
+                  <tr>
+                  <td>Relaxation Mask</td>
+                  <td>$14</td>
+                </tr>
+                  <tr>
+                  <td>Relaxation Mask</td>
+                  <td>$14</td>
+                </tr>
+                  <tr>
+                  <td>Relaxation Mask</td>
+                  <td>$14</td>
+                </tr>
+
+            </table>
+          </div>
+        </div>
+           <div class="col-sm-4">
+  
+          <div class="price_container">
+            <h4 class="">Skin</h4>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Relaxation Mask</td>
+                  <td>$14</td>
+                </tr>
+                  <tr>
+                  <td>Relaxation Mask</td>
+                  <td>$14</td>
+                </tr>
+                  <tr>
+                  <td>Relaxation Mask</td>
+                  <td>$14</td>
+                </tr>
+                  <tr>
+                  <td>Relaxation Mask</td>
+                  <td>$14</td>
+                </tr>
+
+            </table>
+          </div>
+        </div>
+      </div>
+</div>
+</section>
+
+
+
+<!--slick slider-->
+
+  <section class="regular slider">
+    <div>
+      <img src="images/box1.jpg">
+    </div>
+    <div>
+      <img src="images/box2.jpg">
+    </div>
+    <div>
+      <img src="images/box3.jpg">
+    </div>
+    <div>
+      <img src="images/box4.jpg">
+    </div>
+    <div>
+      <img src="images/box5.jpg">
+    </div>
+    <div>
+      <img src="images/box6.jpg">
+    </div>
+  </section>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="slick.min.js"></script>
+
+<!-- 
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/parallax/jarallax.min.js"></script>
+  <script src="assets/theme/js/script.js"></script> -->
+
+
+  <script>
+
+$(document).ready(function(){
+   $(".regular").slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 4
+      });
+
+})
+       
+  // Gallery image hover
+$( ".img-wrapper" ).hover(
+  function() {
+    $(this).find(".img-overlay").animate({opacity: 1}, 600);
+  }, function() {
+    $(this).find(".img-overlay").animate({opacity: 0}, 600);
+  }
+);
+
+// Lightbox
+var $overlay = $('<div id="overlay"></div>');
+var $image = $("<img>");
+var $prevButton = $('<div id="prevButton"><i class="fa fa-chevron-left"></i></div>');
+var $nextButton = $('<div id="nextButton"><i class="fa fa-chevron-right"></i></div>');
+var $exitButton = $('<div id="exitButton"><i class="fa fa-times"></i></div>');
+
+// Add overlay
+$overlay.append($image).prepend($prevButton).append($nextButton).append($exitButton);
+$("#gallery").append($overlay);
+
+// Hide overlay on default
+$overlay.hide();
+
+// When an image is clicked
+$(".img-overlay").click(function(event) {
+  // Prevents default behavior
+  event.preventDefault();
+  // Adds href attribute to variable
+  var imageLocation = $(this).prev().attr("href");
+  // Add the image src to $image
+  $image.attr("src", imageLocation);
+  // Fade in the overlay
+  $overlay.fadeIn("slow");
+});
+
+// When the overlay is clicked
+$overlay.click(function() {
+  // Fade out the overlay
+  $(this).fadeOut("slow");
+});
+
+// When next button is clicked
+$nextButton.click(function(event) {
+  // Hide the current image
+  $("#overlay img").hide();
+  // Overlay image location
+  var $currentImgSrc = $("#overlay img").attr("src");
+  // Image with matching location of the overlay image
+  var $currentImg = $('#image-gallery img[src="' + $currentImgSrc + '"]');
+  // Finds the next image
+  var $nextImg = $($currentImg.closest(".image").next().find("img"));
+  // All of the images in the gallery
+  var $images = $("#image-gallery img");
+  // If there is a next image
+  if ($nextImg.length > 0) { 
+    // Fade in the next image
+    $("#overlay img").attr("src", $nextImg.attr("src")).fadeIn(800);
+  } else {
+    // Otherwise fade in the first image
+    $("#overlay img").attr("src", $($images[0]).attr("src")).fadeIn(800);
+  }
+  // Prevents overlay from being hidden
+  event.stopPropagation();
+});
+
+// When previous button is clicked
+$prevButton.click(function(event) {
+  // Hide the current image
+  $("#overlay img").hide();
+  // Overlay image location
+  var $currentImgSrc = $("#overlay img").attr("src");
+  // Image with matching location of the overlay image
+  var $currentImg = $('#image-gallery img[src="' + $currentImgSrc + '"]');
+  // Finds the next image
+  var $nextImg = $($currentImg.closest(".image").prev().find("img"));
+  // Fade in the next image
+  $("#overlay img").attr("src", $nextImg.attr("src")).fadeIn(800);
+  // Prevents overlay from being hidden
+  event.stopPropagation();
+});
+
+// When the exit button is clicked
+$exitButton.click(function() {
+  // Fade out the overlay
+  $("#overlay").fadeOut("slow");
+});
+  
+</script>
+</body>
+</html>
